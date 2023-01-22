@@ -78,3 +78,9 @@ xml::parser;2.46;https://cpan.metacpan.org/authors/id/T/TO/TODDR/XML-Parser-@.ta
 xz utils;5.2.6;https://tukaani.org/xz/xz-@.tar.xz;d9cd5698e1ec06cf638c0d2d645e8175
 zlib;1.2.13;https://github.com/madler/zlib/releases/download/v@/zlib-@.tar.gz;28687d676c04e7103bb6ff2b9694c471
 zstd;1.5.2;https://github.com/facebook/zstd/releases/download/v@/zstd-@.tar.gz;072b10f71f5820c24761a65f31f43e73
+bzip2 documentation patch;1.0.8;https://www.linuxfromscratch.org/patches/lfs/11.2/bzip2-@-install_docs-1.patch;6a5ac7e89b791aae556de0f745916f7f
+coreutils internationalization fixes;9.1;https://www.linuxfromscratch.org/patches/lfs/11.2/coreutils-@-i18n-1.patch;c1ac7edf095027460716577633da9fc5
+glibc fhs patch;2.36;https://www.linuxfromscratch.org/patches/lfs/11.2/glibc-@-fhs-1.patch;9a5997c3452909b1769918c759eff8a2
+kbd backspace/delete fix patch;2.5.1;https://www.linuxfromscratch.org/patches/lfs/11.2/kbd-@-backspace-1.patch;f75cca16a38da6caa7d52151f7136895
+sysvinit consolidated patch;3.04;https://www.linuxfromscratch.org/patches/lfs/11.2/sysvinit-@-consolidated-1.patch;4900322141d493e74020c9cf437b2cdc
+zstd upstream fixes patch;1.5.2;https://www.linuxfromscratch.org/patches/lfs/11.2/zstd-@-upstream_fixes-1.patch;a7e576e3f87415fdf388392b257cdcf3
