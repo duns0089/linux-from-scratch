@@ -47,3 +47,6 @@ make install
 cd ..
 cat gcc/limitx.h gcc/glimits.h gcc/limity.h > \
     `dirname $($LFS_TGT-gcc -print-libgcc-file-name)`/install-tools/include/limits.h
+
+# make a shortcut folder for libstd++.sh
+ln -s "$(pwd)" "../libstdc++"

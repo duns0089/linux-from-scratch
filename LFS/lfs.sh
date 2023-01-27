@@ -36,9 +36,24 @@ source download.sh
 
 ## all packages downloaded
 
-# chapter 5 
+# CHAPTER 5 
 # source packageinstall.sh 5 binutils
 # source packageinstall.sh 5 gcc
-for package in  linux glibc libstdc++; do
-    source packageinstall.sh 5 $package
-done
+# source packageinstall.sh 5 linux
+# source packageinstall.sh 5 glibc
+# # source packageinstall.sh 5 libstdc++ 1 ## following pass 2 gcc replacing this call
+# source packageinstall.sh 5.6 gcc
+
+# CHAPTER 6
+# first pass
+source packageinstall.sh 6 m4
+# for p in ncurses bash coreutils diffutils file findutils gawk grep gzip make patch sed tar xz; do
+#     source packageinstall.sh 6 $p
+# done
+# # second or more passes
+# for p in binutils gcc; do
+#     source packageinstall.sh 6 $p
+# done
+
+
+
