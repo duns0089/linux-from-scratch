@@ -3,8 +3,8 @@ export LFS_TGT=x86_64-lfs-linux-gnu
 export LFS_DISK=/dev/sdb
 
 if ! grep -q "$LFS" /proc/mounts; then
-    # source ./setupdisk.sh "$LFS_DISK"
-    # sudo mkdir $LFS # make mount destination
+    source ./setupdisk.sh "$LFS_DISK"
+    sudo mkdir $LFS # make mount destination
     sudo mount "${LFS_DISK}2" "$LFS" # mount usb part 2 to $LFS
     sudo chown -v $USER "$LFS" # set owner before making folders
 fi
@@ -37,16 +37,15 @@ source download.sh
 ## all packages downloaded
 
 # CHAPTER 5 
-# source packageinstall.sh 5 binutils
-# source packageinstall.sh 5 gcc
-# source packageinstall.sh 5 linux
-# source packageinstall.sh 5 glibc
-# # source packageinstall.sh 5 libstdc++ 1 ## following pass 2 gcc replacing this call
-# source packageinstall.sh 5.6 gcc
+source packageinstall.sh 5 binutils
+source packageinstall.sh 5 gcc
+source packageinstall.sh 5 linux
+source packageinstall.sh 5 glibc
+source packageinstall.sh 5.6 gcc # source packageinstall.sh 5 libstdc++ 1 ## following pass 2 gcc replacing this call
 
 # CHAPTER 6
 # first pass
-source packageinstall.sh 6 m4
+# source packageinstall.sh 6 m4
 # for p in ncurses bash coreutils diffutils file findutils gawk grep gzip make patch sed tar xz; do
 #     source packageinstall.sh 6 $p
 # done
