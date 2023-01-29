@@ -10,7 +10,7 @@ if ! grep -q "$LFS" /proc/mounts; then
 fi
 
 mkdir -pv $LFS/sources # for lfs build system
-mkdir -pv $LFS/tools # intemmediate cross-compiler from A -> b
+mkdir -pv $LFS/tools # intermmediate cross-compiler from A -> b
 
 # fsh linux folders - chapter 4.4
 mkdir -pv $LFS/boot
