@@ -9,9 +9,11 @@ cat $PACKAGES | grep -i "^$PACKAGE;" | grep -v -i "\.patch;" | while read line; 
     CACHEFILE="$(basename "$URL")"
     DIRNAME="$(echo $CACHEFILE | sed 's/\(.*\)\.tar\..*/\1/')"
 
-    if [ -d "$DIRNAME"]; then
-        rm -rf "$DIRNAME"
+    if [ -d "$DIRNAME" ]; then
+        echo "Removing old $DIRNAME"
+        rm -rvf "$DIRNAME"
     fi
+    exit 1
     mkdir -pv "$DIRNAME"
 
     echo "Extracting $CACHEFILE"

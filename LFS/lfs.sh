@@ -30,28 +30,24 @@ cp -rf *.sh chapter* packages.csv "$LFS/sources"
 cd "$LFS/sources"
 echo "Now we are at: $(pwd)"
 export PATH="$LFS/tools/bin:$PATH"
-echo $PATH
+echo "PATH: $PATH"
 
-source download.sh
+# CHAPTER 3
+source download.sh # won't redownload
 
 ## all packages downloaded
 
 # CHAPTER 5 
-source packageinstall.sh 5 binutils
-source packageinstall.sh 5 gcc
-source packageinstall.sh 5 linux
-source packageinstall.sh 5 glibc
-source packageinstall.sh 5.6 gcc # source packageinstall.sh 5 libstdc++ 1 ## following pass 2 gcc replacing this call
+# source packageinstall.sh 5 binutils
+# source packageinstall.sh 5 gcc
+# source packageinstall.sh 5 linux
+# source packageinstall.sh 5 glibc
+# source packageinstall.sh 5.6 gcc # source packageinstall.sh 5 libstdc++ 1 ## following pass 2 gcc replacing this call
 
 # CHAPTER 6
-# first pass
-# source packageinstall.sh 6 m4
-# for p in ncurses bash coreutils diffutils file findutils gawk grep gzip make patch sed tar xz; do
-#     source packageinstall.sh 6 $p
-# done
-# # second or more passes
-# for p in binutils gcc; do
-#     source packageinstall.sh 6 $p
+source packageinstall.sh 6 gcc
+# for p in m4 ncurses bash coreutils diffutils file findutils gawk grep gzip make patch sed tar xz binutils gcc; do
+    # source packageinstall.sh 6 $p
 # done
 
 

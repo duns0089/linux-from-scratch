@@ -4,4 +4,4 @@
 
 make
 
-make DESKDIR=$LFS install
+make DESTDIR=$LFS install
