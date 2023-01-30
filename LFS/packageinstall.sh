@@ -1,7 +1,10 @@
 CHAPTER="$1"
 PACKAGE="$2"
 
+echo "Preparing to install $PACKAGE for Chapter $CHAPTER..."
+
 cat $PACKAGES | grep -i "^$PACKAGE;" | grep -v -i "\.patch;" | while read line; do
+    
     # NAME="`echo $line | cut -d\; -f1`"
     VERSION="`echo $line | cut -d\; -f2`"
     URL="`echo $line | cut -d\; -f3 | sed "s/@/$VERSION/g"`"
@@ -10,13 +13,13 @@ cat $PACKAGES | grep -i "^$PACKAGE;" | grep -v -i "\.patch;" | while read line; 
     DIRNAME="$(echo $CACHEFILE | sed 's/\(.*\)\.tar\..*/\1/')"
 
     if [ -d "$DIRNAME" ]; then
-        echo "Removing old $DIRNAME"
+        echo "Removing old $DIRNAME..."
         rm -rvf "$DIRNAME"
     fi
-    exit 1
+    
     mkdir -pv "$DIRNAME"
 
-    echo "Extracting $CACHEFILE"
+    echo "Extracting $CACHEFILE..."
     tar -xvf "$CACHEFILE" -C "$DIRNAME"
 
     pushd "$DIRNAME"
@@ -25,7 +28,7 @@ cat $PACKAGES | grep -i "^$PACKAGE;" | grep -v -i "\.patch;" | while read line; 
             mv $(ls -1A)/* ./
         fi
 
-        echo "Compiling $PACKAGE"
+        echo "Compiling $PACKAGE..."
         sleep 5
 
         mkdir -pv "../log/chapter$CHAPTER/"
@@ -36,7 +39,7 @@ cat $PACKAGES | grep -i "^$PACKAGE;" | grep -v -i "\.patch;" | while read line; 
             exit 1
         fi
 
-        echo "Done compiling $PACKAGE"
+        echo "Done compiling $PACKAGE!"
 
     popd
 

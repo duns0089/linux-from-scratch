@@ -75,7 +75,7 @@ util-linux;2.38.1;https://www.kernel.org/pub/linux/utils/util-linux/v2.38/util-l
 vim;9.0.0228;https://anduin.linuxfromscratch.org/LFS/vim-@.tar.gz;bc7e0a4829d94bb4c03a7a6b4ad6a8cf
 wheel;0.37.1;https://anduin.linuxfromscratch.org/LFS/wheel-@.tar.gz;f490f1399e5903706cb1d4fbed9ecb28
 xml::parser;2.46;https://cpan.metacpan.org/authors/id/T/TO/TODDR/XML-Parser-@.tar.gz;80bb18a8e6240fcf7ec2f7b57601c170
-xz utils;5.2.6;https://tukaani.org/xz/xz-@.tar.xz;d9cd5698e1ec06cf638c0d2d645e8175
+xz;5.2.6;https://tukaani.org/xz/xz-@.tar.xz;d9cd5698e1ec06cf638c0d2d645e8175
 zlib;1.2.13;https://github.com/madler/zlib/releases/download/v@/zlib-@.tar.gz;28687d676c04e7103bb6ff2b9694c471
 zstd;1.5.2;https://github.com/facebook/zstd/releases/download/v@/zstd-@.tar.gz;072b10f71f5820c24761a65f31f43e73
 bzip2 documentation patch;1.0.8;https://www.linuxfromscratch.org/patches/lfs/11.2/bzip2-@-install_docs-1.patch;6a5ac7e89b791aae556de0f745916f7f

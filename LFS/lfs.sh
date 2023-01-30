@@ -12,7 +12,7 @@ fi
 mkdir -pv $LFS/sources # for lfs build system
 mkdir -pv $LFS/tools # intermmediate cross-compiler from A -> b
 
-# fsh linux folders - chapter 4.4
+# CHAPTER 4.4 - fsh linux folders 
 mkdir -pv $LFS/boot
 mkdir -pv $LFS/etc
 mkdir -pv $LFS/bin
@@ -38,17 +38,16 @@ source download.sh # won't redownload
 ## all packages downloaded
 
 # CHAPTER 5 
-# source packageinstall.sh 5 binutils
-# source packageinstall.sh 5 gcc
-# source packageinstall.sh 5 linux
-# source packageinstall.sh 5 glibc
-# source packageinstall.sh 5.6 gcc # source packageinstall.sh 5 libstdc++ 1 ## following pass 2 gcc replacing this call
+source packageinstall.sh 5 binutils
+source packageinstall.sh 5 gcc
+source packageinstall.sh 5 linux
+source packageinstall.sh 5 glibc
+source packageinstall.sh 5.6 gcc # source packageinstall.sh 5 libstdc++ 1 ## following pass 2 gcc replacing this call
 
-# CHAPTER 6
-source packageinstall.sh 6 gcc
-# for p in m4 ncurses bash coreutils diffutils file findutils gawk grep gzip make patch sed tar xz binutils gcc; do
-    # source packageinstall.sh 6 $p
-# done
+CHAPTER 6
+for p in m4 ncurses bash coreutils diffutils file findutils gawk grep gzip make patch sed tar xz binutils gcc; do
+    source packageinstall.sh 6 $p
+done
 
 
 
