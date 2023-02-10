@@ -48,17 +48,19 @@ source download.sh # won't redownload
 # done
 
 # CHAPTER 7
+chmod ugo+x undopreparechroot.sh
 chmod ugo+x preparechroot.sh
 chmod ugo+x insidechroot.sh
 sudo ./preparechroot.sh "$LFS"
+# sudo ./undopreparechroot.sh "$LFS"; echo "undid prepare chroot"; exit 1
+
 echo "Entering CHROOT ENVIRONMENT..."
 sleep 3
 
-
-sudo chroot "$LFS" /usr/bin/env -i             \
+sudo chroot "$LFS" /usr/bin/env             \
     HOME=/root                              \
     TERN="$TERM"                            \
-    PS1='(lfs chroot) \u:\w\$ '             \
+    PS1="(lfs chroot) \u:\w\$ "             \
     PATH="/bin:/usr/bin:/sbin:/usr/sbin"    \
     /bin/bash --login +h -c "/source/insidechroot.sh"
 
